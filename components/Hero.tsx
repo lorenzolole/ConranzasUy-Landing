@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
 
   // Phone transforms
   // Phone transforms
-  const phoneScale = useTransform(smoothScroll, [0, 0.4], [1, 1.2]);
+  const phoneScale = useTransform(smoothScroll, [0, 0.4], [1, 0.8]);
   const phoneOpacity = useTransform(smoothScroll, [0.4, 0.5], [1, 0]); // Fade out phone for explosion
   const phoneRotate = useTransform(smoothScroll, [0, 0.5], [0, -10]);
   const phoneY = useTransform(smoothScroll, [0, 0.5], [0, 100]);
