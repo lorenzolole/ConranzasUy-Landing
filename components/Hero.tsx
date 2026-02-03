@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
   const phoneScale = useTransform(smoothScroll, [0, 0.4], [1, 0.8]);
   const phoneOpacity = useTransform(smoothScroll, [0.4, 0.5], [1, 0]); // Fade out phone for explosion
   const phoneRotate = useTransform(smoothScroll, [0, 0.5], [0, -10]);
-  const phoneY = useTransform(smoothScroll, [0, 0.5], [0, 100]);
+  const phoneY = useTransform(smoothScroll, [0, 0.5], [0, -200]);
 
   // Explosion transforms
   const explosionOpacity = useTransform(smoothScroll, [0.4, 0.5], [0, 1]);
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
         </defs>
       </svg>
 
-      <div className="sticky top-0 h-[100vh] min-h-[900px] overflow-hidden flex flex-col items-center justify-center pt-24">
+      <div className="sticky top-0 min-h-[100dvh] h-auto overflow-visible flex flex-col items-center justify-center pt-24">
 
         {/* Money Explosion Particles (Restored) */}
         <motion.div
@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-[300px] h-[600px] md:w-[350px] md:h-[700px] flex-shrink-0 bg-background border-8 border-neutral-800 rounded-[3rem] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/10 relative z-20">
+          <div className="w-[300px] h-[600px] md:w-[350px] md:h-[640px] flex-shrink-0 bg-background border-8 border-neutral-800 rounded-[3rem] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/10 relative z-20 mt-32 md:mt-48">
             {/* Phone Notch */}
             <div className="absolute top-0 w-full flex justify-center pt-4 z-20">
               <div className="w-32 h-6 bg-black rounded-full" />
@@ -154,7 +154,7 @@ const Hero: React.FC = () => {
         {/* Hero Text Overlay (Restored position) */}
         <motion.div
           style={{ y: textY, opacity: textOpacity }}
-          className="absolute inset-0 flex flex-col items-center justify-center z-30 pointer-events-none"
+          className="absolute inset-0 flex flex-col items-center justify-center z-30 pointer-events-none pb-64 md:pb-96"
         >
           <div className="text-center px-4 md:px-0">
 
