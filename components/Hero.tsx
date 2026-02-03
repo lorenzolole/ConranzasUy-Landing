@@ -103,10 +103,10 @@ const Hero: React.FC = () => {
         {/* Central Object: Phone with Electric Border */}
         <motion.div
           style={{ scale: phoneScale, y: phoneY, opacity: phoneOpacity, rotateX: phoneRotate }}
-          className="relative z-20"
+          className="relative z-20 mt-32 md:mt-48"
         >
           {/* Electric Border Effect Wrapper */}
-          <div className="absolute inset-0 -z-10 scale-105">
+          <div className="absolute -inset-2 -z-10 rounded-[3.5rem]">
             <div className="card-container-effect w-full h-full">
               <div className="inner-container w-full h-full">
                 <div className="border-outer"></div>
@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-[300px] h-[600px] md:w-[350px] md:h-[640px] flex-shrink-0 bg-background border-8 border-neutral-800 rounded-[3rem] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/10 relative z-20 mt-32 md:mt-48">
+          <div className="w-[300px] h-[600px] md:w-[350px] md:h-[640px] flex-shrink-0 bg-background border-8 border-neutral-800 rounded-[3rem] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/10 relative z-20">
             {/* Phone Notch */}
             <div className="absolute top-0 w-full flex justify-center pt-4 z-20">
               <div className="w-32 h-6 bg-black rounded-full" />
