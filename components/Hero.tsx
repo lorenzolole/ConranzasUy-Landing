@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
         </defs>
       </svg>
 
-      <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center justify-center scale-[0.85] md:scale-90 xl:scale-100 transition-transform duration-300">
+      <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center justify-center scale-[0.8] md:scale-90 xl:scale-100 transition-transform duration-300">
 
         {/* Money Explosion Particles (Restored) */}
         <motion.div
@@ -153,11 +153,12 @@ const Hero: React.FC = () => {
 
         {/* Hero Text Overlay (Restored position) */}
         {/* Hero Text Overlay - Title & Description (Behind Phone) */}
+        {/* Hero Text Overlay (Restured & Optimized) */}
         <motion.div
           style={{ y: textY, opacity: textOpacity }}
-          className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none"
+          className="absolute inset-0 flex flex-col items-center justify-center z-30 pointer-events-none"
         >
-          <div className="text-center px-4 md:px-0 mt-[-50px]">
+          <div className="text-center px-4 md:px-0 mt-[-60px]"> {/* Lifted up to clear phone content */}
             <h2 className="text-xl md:text-2xl font-light tracking-[0.2em] text-primary uppercase mb-4">
               Recuperación Inteligente
             </h2>
@@ -168,15 +169,7 @@ const Hero: React.FC = () => {
               Automatiza tu gestión de cobranzas por WhatsApp.
               Convierte deudas en liquidez con nuestro sistema SaaS para PyMEs.
             </p>
-          </div>
-        </motion.div>
 
-        {/* Hero Text Overlay - Buttons (In Front of Phone) */}
-        <motion.div
-          style={{ y: textY, opacity: textOpacity }}
-          className="absolute inset-0 flex flex-col items-center justify-center z-30 pointer-events-none"
-        >
-          <div className="text-center px-4 md:px-0 mt-[250px] md:mt-[300px]">
             <div className="flex flex-col md:flex-row gap-4 justify-center pointer-events-auto">
               <button className="px-8 py-4 bg-primary text-white rounded-full font-semibold text-lg hover:bg-secondary transition-all flex items-center gap-2 group shadow-lg shadow-primary/25">
                 Empezar Ahora
