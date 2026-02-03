@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-[300px] h-[600px] md:w-[350px] md:h-[700px] bg-background border-8 border-neutral-800 rounded-[3rem] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/10">
+          <div className="w-[280px] h-[560px] md:w-[320px] md:h-[640px] max-h-[80vh] bg-background border-8 border-neutral-800 rounded-[3rem] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/10">
             {/* Phone Notch */}
             <div className="absolute top-0 w-full flex justify-center pt-4 z-20">
               <div className="w-32 h-6 bg-black rounded-full" />
