@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
         </defs>
       </svg>
 
-      <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center justify-center">
+      <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center justify-center scale-[0.85] md:scale-90 xl:scale-100 transition-transform duration-300">
 
         {/* Money Explosion Particles (Restored) */}
         <motion.div
@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-[260px] h-[520px] md:w-[300px] md:h-[600px] max-h-[65vh] bg-background border-8 border-neutral-800 rounded-[3rem] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/10">
+          <div className="w-[300px] h-[600px] md:w-[350px] md:h-[700px] bg-background border-8 border-neutral-800 rounded-[3rem] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/10">
             {/* Phone Notch */}
             <div className="absolute top-0 w-full flex justify-center pt-4 z-20">
               <div className="w-32 h-6 bg-black rounded-full" />
@@ -152,22 +152,31 @@ const Hero: React.FC = () => {
         </motion.div>
 
         {/* Hero Text Overlay (Restored position) */}
+        {/* Hero Text Overlay - Title & Description (Behind Phone) */}
         <motion.div
           style={{ y: textY, opacity: textOpacity }}
-          className="absolute inset-0 flex flex-col items-center justify-center z-30 pointer-events-none"
+          className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none"
         >
-          <div className="text-center px-4 md:px-0">
+          <div className="text-center px-4 md:px-0 mt-[-50px]">
             <h2 className="text-xl md:text-2xl font-light tracking-[0.2em] text-primary uppercase mb-4">
               Recuperación Inteligente
             </h2>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-6 text-foreground drop-shadow-2xl">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 text-foreground drop-shadow-2xl">
               Cobranzas<span className="text-primary italic">Uy</span>
             </h1>
             <p className="max-w-xl mx-auto text-neutral-300 text-lg md:text-xl mb-10 leading-relaxed font-light">
               Automatiza tu gestión de cobranzas por WhatsApp.
               Convierte deudas en liquidez con nuestro sistema SaaS para PyMEs.
             </p>
+          </div>
+        </motion.div>
 
+        {/* Hero Text Overlay - Buttons (In Front of Phone) */}
+        <motion.div
+          style={{ y: textY, opacity: textOpacity }}
+          className="absolute inset-0 flex flex-col items-center justify-center z-30 pointer-events-none"
+        >
+          <div className="text-center px-4 md:px-0 mt-[250px] md:mt-[300px]">
             <div className="flex flex-col md:flex-row gap-4 justify-center pointer-events-auto">
               <button className="px-8 py-4 bg-primary text-white rounded-full font-semibold text-lg hover:bg-secondary transition-all flex items-center gap-2 group shadow-lg shadow-primary/25">
                 Empezar Ahora
