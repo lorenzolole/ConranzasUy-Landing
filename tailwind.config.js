@@ -9,18 +9,18 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#F59E0B', // Amber-500
+          DEFAULT: '#10B981', // Emerald-500
           foreground: '#FFFFFF',
         },
         secondary: {
-          DEFAULT: '#FBBF24', // Amber-400
-          foreground: '#111827',
+          DEFAULT: '#059669', // Emerald-600
+          foreground: '#FFFFFF',
         },
-        background: '#0F172A', // Slate-900
+        background: '#000000', // Pure Black
         foreground: '#F8FAFC', // Slate-50
       },
       fontFamily: {
-        sans: ['"IBM Plex Sans"', 'sans-serif'],
+        sans: ['"Inter"', 'sans-serif'],
       },
     },
   },
