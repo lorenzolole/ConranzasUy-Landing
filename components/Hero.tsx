@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
         </defs>
       </svg>
 
-      <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center justify-center scale-[0.8] md:scale-90 xl:scale-100 transition-transform duration-300">
+      <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center justify-center scale-[0.75] md:scale-90 xl:scale-100 transition-transform duration-300">
 
         {/* Money Explosion Particles (Restored) */}
         <motion.div
@@ -158,7 +158,7 @@ const Hero: React.FC = () => {
           style={{ y: textY, opacity: textOpacity }}
           className="absolute inset-0 flex flex-col items-center justify-center z-30 pointer-events-none"
         >
-          <div className="text-center px-4 md:px-0 mt-[-60px]"> {/* Lifted up to clear phone content */}
+          <div className="text-center px-4 md:px-0 mt-[-100px] md:mt-[-120px]"> {/* Lifted significantly to clear phone content */}
             <h2 className="text-xl md:text-2xl font-light tracking-[0.2em] text-primary uppercase mb-4">
               Recuperación Inteligente
             </h2>
