@@ -21,11 +21,11 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen text-white selection:bg-white selection:text-black">
+    <div className="bg-background min-h-screen text-foreground selection:bg-primary selection:text-white">
       <AnimatePresence>
         {loading && <Loader key="loader" />}
       </AnimatePresence>
-      
+
       {!loading && (
         <>
           <Navbar />
@@ -37,7 +37,7 @@ const App: React.FC = () => {
             <FAQ />
             <Contact />
           </main>
-          
+
           <footer className="py-8 text-center text-neutral-600 text-sm border-t border-neutral-900">
             <p>© {new Date().getFullYear()} CobranzasUy. Todos los derechos reservados.</p>
           </footer>

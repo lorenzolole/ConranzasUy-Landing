@@ -34,13 +34,12 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-white/10 shadow-lg' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold tracking-tighter z-50 relative">
-          Cobranzas<span className="text-neutral-400">Uy</span>
+        <a href="#" className="text-2xl font-bold tracking-tighter z-50 relative text-foreground">
+          Cobranzas<span className="text-primary">Uy</span>
         </a>
 
         {/* Desktop Nav */}
@@ -50,12 +49,12 @@ const Navbar: React.FC = () => {
               key={link.name}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
+              className="text-sm font-medium text-neutral-300 hover:text-primary transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <button className="bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-neutral-200 transition-colors">
+          <button className="bg-primary text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-secondary transition-colors shadow-lg shadow-primary/20">
             Acceso Clientes
           </button>
         </div>
@@ -88,7 +87,7 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-             <button className="bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-neutral-200 transition-colors mt-4">
+            <button className="bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-neutral-200 transition-colors mt-4">
               Acceso Clientes
             </button>
           </motion.div>

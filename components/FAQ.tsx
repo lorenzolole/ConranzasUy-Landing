@@ -25,19 +25,19 @@ const FAQ: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 bg-black border-t border-neutral-900">
+    <section id="faq" className="py-24 bg-background border-t border-white/5">
       <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center">Preguntas Frecuentes</h2>
-        
+        <h2 className="text-4xl font-bold mb-12 text-center text-foreground">Preguntas Frecuentes</h2>
+
         <div className="space-y-4">
           {faqs.map((item, idx) => (
             <div key={idx} className="border-b border-white/10">
               <button
                 onClick={() => setActiveIndex(activeIndex === idx ? null : idx)}
-                className="w-full py-6 flex items-center justify-between text-left focus:outline-none"
+                className="w-full py-6 flex items-center justify-between text-left focus:outline-none group"
               >
-                <span className="text-xl font-medium text-white">{item.q}</span>
-                <span className="text-white/50 ml-4">
+                <span className="text-xl font-medium text-foreground group-hover:text-primary transition-colors">{item.q}</span>
+                <span className="text-white/50 ml-4 group-hover:text-primary transition-colors">
                   {activeIndex === idx ? <Minus size={24} /> : <Plus size={24} />}
                 </span>
               </button>
