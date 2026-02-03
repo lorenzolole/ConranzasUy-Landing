@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
         </defs>
       </svg>
 
-      <div className="sticky top-0 min-h-[100dvh] h-auto overflow-visible flex flex-col items-center justify-center pt-24">
+      <div className="sticky top-0 min-h-[100dvh] h-auto overflow-visible flex flex-col items-center justify-start">
 
         {/* Money Explosion Particles (Restored) */}
         <motion.div
@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
         {/* Central Object: Phone with Electric Border */}
         <motion.div
           style={{ scale: phoneScale, y: phoneY, opacity: phoneOpacity, rotateX: phoneRotate }}
-          className="relative z-20 mt-32 md:mt-48"
+          className="relative z-20 mt-[28rem] md:mt-[32rem]"
         >
           {/* Electric Border Effect Wrapper */}
           <div className="absolute -inset-2 -z-10 rounded-[3.5rem]">
@@ -154,14 +154,14 @@ const Hero: React.FC = () => {
         {/* Hero Text Overlay (Restored position) */}
         <motion.div
           style={{ y: textY, opacity: textOpacity }}
-          className="absolute inset-0 flex flex-col items-center justify-center z-30 pointer-events-none pb-64 md:pb-96"
+          className="absolute inset-0 flex flex-col items-center justify-start z-30 pointer-events-none pt-32 md:pt-48"
         >
           <div className="text-center px-4 md:px-0">
 
-            <h1 className="text-6xl md:text-8xl lg:text-8xl font-bold tracking-tighter mb-6 text-foreground drop-shadow-2xl">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 text-foreground drop-shadow-2xl">
               Cobranzas<span className="text-primary italic">Uy</span>
             </h1>
-            <p className="max-w-xl mx-auto text-neutral-300 text-lg md:text-xl mb-10 leading-relaxed font-light">
+            <p className="max-w-xl mx-auto text-neutral-300 text-lg md:text-xl mb-8 leading-relaxed font-light">
               Automatiza tu gestión de cobranzas por WhatsApp.
               Convierte deudas en liquidez con nuestro sistema SaaS para PyMEs.
             </p>
