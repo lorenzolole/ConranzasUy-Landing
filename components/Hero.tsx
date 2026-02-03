@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
         </defs>
       </svg>
 
-      <div className="sticky top-0 h-[100dvh] overflow-hidden flex flex-col items-center justify-center pt-24">
+      <div className="sticky top-0 h-[100dvh] overflow-hidden flex flex-col items-center justify-start pt-32 gap-6 md:gap-10">
 
         {/* Money Explosion Particles (Restored) */}
         <motion.div
