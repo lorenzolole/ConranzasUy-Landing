@@ -100,31 +100,56 @@ const Hero: React.FC = () => {
           <div className="w-64 h-64 bg-primary/20 blur-[100px] rounded-full absolute" />
         </motion.div>
 
-        {/* Central Object: Phone with Electric Border */}
+        {/* 1. Hero Text Content (Static at top, no shrink) */}
+        <motion.div
+          style={{ y: textY, opacity: textOpacity }}
+          className="relative z-20 flex flex-col items-center justify-center text-center px-4 flex-none"
+        >
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-4 text-foreground drop-shadow-2xl">
+            Cobranzas<span className="text-primary italic">Uy</span>
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground/80 max-w-2xl mx-auto mb-6 font-light">
+            Automatiza tu gestión de cobranzas por WhatsApp. Convierte deudas en liquidez con nuestro sistema SaaS para PyMEs.
+          </p>
+          <div className="flex gap-4">
+            <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 md:px-8 md:py-4 rounded-full font-medium text-lg transition-all shadow-lg hover:shadow-primary/25 flex items-center gap-2 cursor-pointer relative z-50">
+              Empezar Ahora <ArrowRight size={20} />
+            </button>
+            <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 px-6 py-3 md:px-8 md:py-4 rounded-full font-medium text-lg transition-all flex items-center gap-2 cursor-pointer relative z-50">
+              Ver Demo
+            </button>
+          </div>
+        </motion.div>
+
+        {/* 2. Central Object: Phone (Fills remaining space, shrinks if needed) */}
         <motion.div
           style={{ scale: phoneScale, y: phoneY, opacity: phoneOpacity, rotateX: phoneRotate }}
-          className="relative z-20"
+          className="relative z-10 w-full flex justify-center items-start flex-1 min-h-0"
         >
           {/* Electric Border Effect Wrapper */}
-          <div className="absolute inset-0 -z-10 scale-105">
-            <div className="card-container-effect w-full h-full">
-              <div className="inner-container w-full h-full">
+          <div className="absolute inset-0 -z-10 scale-105 pointer-events-none">
+            <div className="card-container-effect w-full h-full flex justify-center items-center">
+              <div className="w-auto h-full aspect-[9/19] relative max-h-full">
+                {/* This wrapper is tricky for the 'border effect' div structure seen previously.
+                     I will retain the previous structure but ensure it wraps the phone dimensions correctly.
+                     The previous effect relied on absolute inset-0 of the parent.
+                  */}
                 <div className="border-outer"></div>
                 <div className="main-card-effect"></div>
                 <div className="glow-layer-1"></div>
                 <div className="glow-layer-2"></div>
+                <div className="background-glow"></div>
               </div>
-              <div className="background-glow"></div>
             </div>
           </div>
 
-          <div className="w-[280px] h-[560px] md:w-[320px] md:h-[640px] max-h-[70vh] bg-background border-8 border-neutral-800 rounded-[3rem] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/10">
+          <div className="w-auto h-full max-h-[50vh] md:max-h-[60vh] aspect-[9/19] bg-background border-8 border-neutral-800 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/10 relative z-20">
             {/* Phone Notch */}
             <div className="absolute top-0 w-full flex justify-center pt-4 z-20">
               <div className="w-32 h-6 bg-black rounded-full" />
             </div>
 
-            {/* Phone Screen UI (Restored) */}
+            {/* Phone Screen UI */}
             <div className="flex-1 bg-neutral-950 p-6 flex flex-col pt-16 relative">
               {/* Message Bubble */}
               <div className="bg-neutral-800 rounded-2xl p-4 rounded-tl-none mb-4 max-w-[80%] border border-neutral-700">
@@ -151,40 +176,12 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Hero Text Overlay (Restored position) */}
-        <motion.div
-          style={{ y: textY, opacity: textOpacity }}
-          className="absolute inset-0 flex flex-col items-center justify-center z-30 pointer-events-none"
-        >
-          <div className="text-center px-4 md:px-0">
-
-            <h1 className="text-6xl md:text-8xl lg:text-8xl font-bold tracking-tighter mb-6 text-foreground drop-shadow-2xl">
-              Cobranzas<span className="text-primary italic">Uy</span>
-            </h1>
-            <p className="max-w-xl mx-auto text-neutral-300 text-lg md:text-xl mb-10 leading-relaxed font-light">
-              Automatiza tu gestión de cobranzas por WhatsApp.
-              Convierte deudas en liquidez con nuestro sistema SaaS para PyMEs.
-            </p>
-
-            <div className="flex flex-col md:flex-row gap-4 justify-center pointer-events-auto">
-              <button className="px-8 py-4 bg-primary text-white rounded-full font-semibold text-lg hover:bg-secondary transition-all flex items-center gap-2 group shadow-lg shadow-primary/25">
-                Empezar Ahora
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-full font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-all hover:border-primary/50">
-                Ver Demo
-              </button>
-            </div>
-          </div>
-        </motion.div>
-
         <motion.div
           style={{ opacity: textOpacity }}
           className="absolute bottom-10 left-0 right-0 flex justify-center z-30"
         >
           <div className="w-[1px] h-24 bg-gradient-to-b from-primary/50 to-transparent" />
         </motion.div>
-
       </div>
     </div>
   );
